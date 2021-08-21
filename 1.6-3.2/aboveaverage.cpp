@@ -11,6 +11,7 @@ int main()
     for (int i = 0; i < c; i++)
     {
         int n;
+        double m = 0;
         vector<int> vg;
         cin >> n;
 
@@ -19,12 +20,7 @@ int main()
             int g;
             cin >> g;
             vg.push_back(g);
-        }
-
-        double m = 0;
-        for (int i = 0; i < vg.size(); i++)
-        {
-            m += vg[i];
+            m += g;
         }
 
         m /= n;
