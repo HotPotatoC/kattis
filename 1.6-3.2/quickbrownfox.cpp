@@ -8,7 +8,6 @@ int main()
 {
     int n;
     string ma;
-    vector<string> vs;
 
     cin >> n;
     cin.ignore();
