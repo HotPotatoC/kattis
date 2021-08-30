@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+
 using namespace std;
 
 int main()
@@ -8,16 +8,18 @@ int main()
     int n;
     while (cin >> n)
     {
-        int x[n];
+        int min = 1000000, max = -1000000;
         for (int i = 0; i < n; i++)
         {
-            cin >> x[i];
+            int x;
+            cin >> x;
+            if (max < x)
+                max = x;
+            if (min > x)
+                min = x;
         }
 
-        int *min = min_element(x, x + n);
-        int *max = max_element(x, x + n);
-
-        cout << "Case " << i << ": " << *min << ' ' << *max << ' ' << *max - *min;
+        cout << "Case " << i << ": " << min << ' ' << max << ' ' << max - min;
 
         cout << '\n';
         i++;
